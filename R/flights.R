@@ -23,7 +23,7 @@ whichflight<-function(param="UA"){
 
   # a hi?nyz? adatokat kiszedem, mert nincs ?rtelme azokat ?tlagolni
   flights<-flights[rowSums(is.na(flights))==0,]
-  flights<-flights[carrier == param]
+  flights<-flights["carrier" == param]
   x<-mean(flights[,arr_delay])
   y<-mean(flights[,dep_delay])
   z<-paste0(param, " carrier ", "mean_arr_delay"," ", x, " min",", ", "mean_dep_delay"," ", y, " min")
