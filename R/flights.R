@@ -18,7 +18,7 @@ whichflight<-function(param="UA"){
   # http://localhost:5602/echo?param=DL
   # a ?param= ut?n ?rjuk a megfelel? cuccot
 
-  flights<-as.data.table(nycflights13::flights)
+  flights<-data.table::as.data.table(nycflights13::flights)
 
 
   # a hi?nyz? adatokat kiszedem, mert nincs ?rtelme azokat ?tlagolni
