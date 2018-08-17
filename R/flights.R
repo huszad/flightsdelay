@@ -23,9 +23,9 @@ whichflight<-function(param="UA"){
 
   # a hi?nyz? adatokat kiszedem, mert nincs ?rtelme azokat ?tlagolni
   flights<-flights[rowSums(is.na(flights))==0,]
-  flights<-flights[carrier == param]
-  x<-mean(flights[,arr_delay])
-  y<-mean(flights[,dep_delay])
+  flights<-flights["carrier" == param]
+  x<-mean(flights[,"arr_delay"])
+  y<-mean(flights[,"dep_delay"])
   z<-paste0(param, " carrier ", "mean_arr_delay"," ", x, " min",", ", "mean_dep_delay"," ", y, " min")
   #x<-flights[carrier == param,.(mean_arr_delay=mean(arr_delay),mean_dep_delay=mean(dep_delay)), by = flight]
   #x<-x[order(flight)]
